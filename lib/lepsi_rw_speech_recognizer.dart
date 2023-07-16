@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
-class RwSpeechRecognizer {
+class LepsiRwSpeechRecognizer {
   static Function(String)? _handler;
 
   static MethodChannel _channel = MethodChannel('com.rockwellits.rw_plugins/rw_speech_recognizer')

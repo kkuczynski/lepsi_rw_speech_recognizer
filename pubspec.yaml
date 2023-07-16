@@ -1,11 +1,11 @@
-name: rw_speech_recognizer
+name: lepsi_rw_speech_recognizer
 description: Speech recognizer plugin for RealWear HMT-1(Z1)
 version: 2.0.0
 homepage: https://github.com/lepsi-city/lepsi_rw_speech_recognizer
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
-
+  sdk: '>=2.18.4 <4.0.0'
+  flutter: '>=1.10.0'
 dependencies:
   flutter:
     sdk: flutter
@@ -16,5 +16,7 @@ dev_dependencies:
 
 flutter:
   plugin:
-    androidPackage: com.rockwellits.rw_plugins.rw_speech_recognizer
-    pluginClass: RwSpeechRecognizerPlugin
+    platforms:
+      android:
+        package: com.rockwellits.rw_plugins.rw_speech_recognizer
+        pluginClass: RwSpeechRecognizerPlugin

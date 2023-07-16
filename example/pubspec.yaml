@@ -1,5 +1,5 @@
-name: rw_speech_recognizer_example
-description: Demonstrates how to use the rw_speech_recognizer plugin.
+name: lepsi_rw_speech_recognizer_example
+description: Demonstrates how to use the lepsi_rw_speech_recognizer plugin.
 publish_to: 'none'
 
 environment:
@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  rw_speech_recognizer:
+  lepsi_rw_speech_recognizer:
     path: ../
 
 flutter:

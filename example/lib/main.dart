@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:rw_speech_recognizer/rw_speech_recognizer.dart';
+import 'package:lepsi_rw_speech_recognizer_example/lepsi_rw_speech_recognizer_example.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
-    RwSpeechRecognizer.setCommands(<String>[
+    LepsiRwSpeechRecognizer.setCommands(<String>[
       'Full Boar',
       'California Sunshine',
       'Deadicated',
