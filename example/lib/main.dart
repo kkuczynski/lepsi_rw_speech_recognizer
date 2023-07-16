@@ -10,7 +10,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _speechCommand;
+  String? _speechCommand;
 
   @override
   void initState() {
@@ -32,8 +32,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-              'RealWear HMT-1 speech recognition plugin example app'),
+          title: const Text('RealWear HMT-1 speech recognition plugin example app'),
         ),
         body: Builder(builder: (BuildContext context) {
           if (_speechCommand != null) {
@@ -45,7 +44,7 @@ class _MyAppState extends State<MyApp> {
                     title: Text(''),
                     content: Text('You said $_speechCommand'),
                     actions: <Widget>[
-                      new FlatButton(
+                      new TextButton(
                         child: const Text('OK'),
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -58,9 +57,7 @@ class _MyAppState extends State<MyApp> {
             });
           }
 
-          return Center(
-              child: const Text(
-                  'Say "Full Boar", "California Sunshine" or "Deadicated"'));
+          return Center(child: const Text('Say "Full Boar", "California Sunshine" or "Deadicated"'));
         }),
       ),
     );

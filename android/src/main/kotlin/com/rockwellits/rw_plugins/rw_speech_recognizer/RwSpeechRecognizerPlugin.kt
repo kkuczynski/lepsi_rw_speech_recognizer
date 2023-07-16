@@ -45,15 +45,19 @@ class RwSpeechRecognizerPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
         private const val EXTRA_RESULT = "command"
 
         @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            val channel = MethodChannel(registrar.messenger(), CHANNEL)
-            val plugin = RwSpeechRecognizerPlugin()
+        fun registerWith(registrar: Registrar?) {
+            if(registrar != null){
+                val channel = MethodChannel(registrar.messenger(), CHANNEL)
+                val plugin = RwSpeechRecognizerPlugin()
+                
+                if(registrar.activity() != null){
+                    plugin.activity = registrar.activity() as Activity
+                    plugin.channel = channel
+                    plugin.initialize()
 
-            plugin.activity = registrar.activity()
-            plugin.channel = channel
-            plugin.initialize()
-
-            channel.setMethodCallHandler(plugin)
+                    channel.setMethodCallHandler(plugin)
+                }
+            }
         }
     }
 
